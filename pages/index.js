@@ -1,12 +1,18 @@
+import { useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
-  const onClick = () => {
+  const handler = () => {
     const introElement = document.getElementById('intro');
     introElement.style.display = 'none';
   };
+
+  useEffect(() => {
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  });
 
   return (
     <div>
@@ -17,7 +23,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div id="intro" className={styles.intro} onClick={onClick}>
+        <div id="intro" className={styles.intro} onClick={handler}>
           <h1 className={styles.title}>nicole lindner</h1>
         </div>
         <div className={styles.home}>

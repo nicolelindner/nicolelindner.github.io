@@ -32,11 +32,12 @@ export default function Exhibitions() {
 
   const renderExhibitionSlides = () => {
     return exhibitions[activeExhibition]?.slides.map((s, i) => {
-      if (s.type === 'image') {
+      const { src, type } = s;
+      if (type === 'image') {
         return (
           <li className={styles.exhibitionSlide}>
             <img
-              src={s.src}
+              src={src}
               className={styles.exhibitionSlideImage}
             />
           </li>
