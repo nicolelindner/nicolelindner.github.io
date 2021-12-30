@@ -7,6 +7,7 @@ module.exports = {
     return {
       '/': { page: '/' },
       '/about': { page: '/about' },
+      '/exhibitions': { page: '/exhibitions' }
     }
   },
   reactStrictMode: true,

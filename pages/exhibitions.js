@@ -1,22 +1,22 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import styles from '../styles/About.module.css'
+import styles from '../styles/Exhibitions.module.css'
 import about from '../content/about'
 
-export default function About() {
+export default function Exhibitions() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>nicole lindner | about</title>
-        <meta name="description" content="About Nicole Lindner" />
+        <title>nicole lindner | exhibitions</title>
+        <meta name="description" content="Nicole Lindner's exhibitions" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <div className={styles.navContainer}>
         <nav className={styles.nav}>
-          <span className={styles.selected}>About</span>
+          <Link href="/about">About</Link>
           <Link href="/about">Conversations</Link>
-          <Link href="/exhibitions">Exhibitions</Link>
+          <span className={styles.selected}>Exhibitions</span>
           <Link href="/about">Projects</Link>
         </nav>
       </div>

@@ -24,7 +24,7 @@ export default function Home() {
           <nav className={styles.nav}>
             <Link href="/about">About</Link>
             <Link href="/about">Conversations</Link>
-            <Link href="/about">Exhibitions</Link>
+            <Link href="/exhibitions">Exhibitions</Link>
             <Link href="/about">Projects</Link>
           </nav>
         </div>
