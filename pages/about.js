@@ -17,7 +17,7 @@ export default function About() {
           <span className={styles.selected}>About</span>
           <Link href="/about">Conversations</Link>
           <Link href="/exhibitions">Exhibitions</Link>
-          <Link href="/about">Projects</Link>
+          <Link href="/projects">Projects</Link>
         </nav>
       </div>
 

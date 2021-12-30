@@ -1,0 +1,46 @@
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+.navContainer {
+  position: fixed;
+  margin-left: 100px;
+  width: 200px;
+}
+
+.nav {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.selected {
+  color: #413e3e;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 300px;
+  height: 100%;
+  width: calc(100% - 300px);
+}
+
+.projectList {
+  width: 400px;
+  margin-left: -200px;
+  color: #413e3e;
+  list-style: none;
+}
+
+.projectListItem {
+  margin: 5px 0;
+  text-decoration: underline;
+}
+
+.projectListItem:before {
+  content: '- ';
+}

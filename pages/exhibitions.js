@@ -16,7 +16,7 @@ export default function Exhibitions() {
       const buttonClassName = activeExhibition === i ? styles.exhibitionListItemSelectedButton : styles.exhibitionListItemButton;
       return (
         <li
-          key={`exhibition=${i}`}
+          key={`exhibition-${i}`}
           className={styles.exhibitionListItem}
         >
           <button
@@ -35,7 +35,10 @@ export default function Exhibitions() {
       const { src, type } = s;
       if (type === 'image') {
         return (
-          <li className={styles.exhibitionSlide}>
+          <li
+            key={`exhibition-${activeExhibition}-slide-${i}`}
+            className={styles.exhibitionSlide}
+          >
             <img
               src={src}
               className={styles.exhibitionSlideImage}
@@ -63,7 +66,7 @@ export default function Exhibitions() {
             <span className={styles.selected}>Exhibitions</span>
             <ul className={styles.exhibitionList}>{renderExhibitionList()}</ul>
           </div>
-          <Link href="/about">Projects</Link>
+          <Link href="/projects">Projects</Link>
         </nav>
       </div>
 

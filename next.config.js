@@ -7,7 +7,8 @@ module.exports = {
     return {
       '/': { page: '/' },
       '/about': { page: '/about' },
-      '/exhibitions': { page: '/exhibitions' }
+      '/exhibitions': { page: '/exhibitions' },
+      '/projects': { page: '/projects' }
     }
   },
   reactStrictMode: true,
