@@ -3,12 +3,14 @@
 }
 
 .intro {
+  position: absolute;
+  z-index: 1;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   background-image: url('/background.jpeg');
-  background-repeat: none;
-  background-size: cover;
-  background-position: center;
+  background-repeat: repeat;
+  background-size: 40%;
+  overflow: hidden;
 }
 
 .title {

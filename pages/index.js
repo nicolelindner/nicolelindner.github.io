@@ -3,6 +3,11 @@ import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+  const onClick = () => {
+    const introElement = document.getElementById('intro');
+    introElement.style.display = 'none';
+  };
+
   return (
     <div>
       <Head>
@@ -12,7 +17,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div className={styles.intro}>
+        <div id="intro" className={styles.intro} onClick={onClick}>
           <h1 className={styles.title}>nicole lindner</h1>
         </div>
         <div className={styles.home}>
