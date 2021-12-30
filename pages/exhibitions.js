@@ -1,9 +1,51 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import styles from '../styles/Exhibitions.module.css'
-import about from '../content/about'
+import { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import styles from '../styles/Exhibitions.module.css';
+import exhibitions from '../content/exhibitions';
 
 export default function Exhibitions() {
+  const [activeExhibition, setActiveExhibition] = useState(0);
+
+  const clickHandler = (i) => {
+    setActiveExhibition(i);
+  };
+
+  const renderExhibitionList = () => {
+    return exhibitions.map((e, i) => {
+      const buttonClassName = activeExhibition === i ? styles.exhibitionListItemSelectedButton : styles.exhibitionListItemButton;
+      return (
+        <li
+          key={`exhibition=${i}`}
+          className={styles.exhibitionListItem}
+        >
+          <button
+            onClick={() => clickHandler(i)}
+            className={buttonClassName}
+          >
+            {e.title}
+          </button>
+        </li>
+      )
+    });
+  };
+
+  const renderExhibitionSlides = () => {
+    return exhibitions[activeExhibition]?.slides.map((s, i) => {
+      if (s.type === 'image') {
+        return (
+          <li className={styles.exhibitionSlide}>
+            <img
+              src={s.src}
+              className={styles.exhibitionSlideImage}
+            />
+          </li>
+        );
+      }
+      return null;
+    });
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -16,13 +58,16 @@ export default function Exhibitions() {
         <nav className={styles.nav}>
           <Link href="/about">About</Link>
           <Link href="/about">Conversations</Link>
-          <span className={styles.selected}>Exhibitions</span>
+          <div>
+            <span className={styles.selected}>Exhibitions</span>
+            <ul className={styles.exhibitionList}>{renderExhibitionList()}</ul>
+          </div>
           <Link href="/about">Projects</Link>
         </nav>
       </div>
 
       <main className={styles.main}>
-        <p className={styles.about}>{about}</p>
+        <ul className={styles.exhibitionSlides}>{renderExhibitionSlides()}</ul>
       </main>
     </div>
   )

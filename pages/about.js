@@ -1,7 +1,7 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import styles from '../styles/About.module.css'
-import about from '../content/about'
+import Head from 'next/head';
+import Link from 'next/link';
+import styles from '../styles/About.module.css';
+import about from '../content/about';
 
 export default function About() {
   return (

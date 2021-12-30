@@ -1,37 +1,70 @@
 .container {
-    width: 100vw;
-    height: 100vh;
-  }
-  
-  .navContainer {
-    position: fixed;
-    margin-left: 100px;
-    width: 200px;
-  }
-  
-  .nav {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-  
-  .selected {
-    color: #413e3e;
-  }
-  
-  .main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 300px;
-    height: 100%;
-    width: calc(100% - 300px);
-  }
-  
-  .about {
-    width: 400px;
-    margin-left: -200px;
-    color: #413e3e;
-  }
-  
+  height: 100%;
+  width: 100%;
+}
+
+.navContainer {
+  position: fixed;
+  margin-left: 100px;
+  width: 300px;
+  z-index: 1;
+}
+
+.nav {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.selected {
+  color: #413e3e;
+}
+
+.exhibitionList {
+  position: absolute;
+  list-style: none;
+  padding-left: 20px;
+}
+
+.exhibitionListItem {
+  margin: 5px 0;
+}
+
+.exhibitionListItemButton {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: #908e8f;
+}
+
+.exhibitionListItemButton:hover {
+  color: #413e3e;
+}
+
+.exhibitionListItemSelectedButton {
+  border: none;
+  background: transparent;
+  color: #413e3e;
+}
+
+.main {
+  margin-left: 400px;
+  height: 100%;
+}
+
+.exhibitionSlides {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.exhibitionSlide {
+  height: 500px;
+  margin-right: 20px;
+}
+
+.exhibitionSlideImage {
+  height: 100%;
+}
