@@ -66,7 +66,7 @@ export default function Conversations() {
         <nav className={styles.nav}>
           <Link href="/about">About</Link>
           <div>
-            <span className={styles.selected}>Conversation</span>
+            <span className={styles.selected}>Conversations</span>
             <ul className={styles.conversationList}>{renderConversationList()}</ul>
           </div>
           <Link href="/exhibitions">Exhibitions</Link>
