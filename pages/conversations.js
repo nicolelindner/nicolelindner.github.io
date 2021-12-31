@@ -34,9 +34,14 @@ export default function Conversations() {
     const conversation = conversations[activeConversation];
     const { title, subtitle, paragraphs } = conversation;
     const renderParagraphs = () => {
-      return paragraphs.map((para) => {
+      return paragraphs.map((para, i) => {
         return (
-          <p className={styles.conversationParagraph}>{para}</p>
+          <p
+            key={`conversation-${activeConversation}-paragraph-${i}`}
+            className={styles.conversationParagraph}
+          >
+            {para}
+          </p>
         );
       });
     }
