@@ -26,6 +26,7 @@ a:active {
 
 * {
   box-sizing: border-box;
+  font-size: 12px;
 }
 
 #__next {

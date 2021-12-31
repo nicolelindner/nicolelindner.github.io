@@ -61,7 +61,7 @@ export default function Exhibitions() {
       <div className={styles.navContainer}>
         <nav className={styles.nav}>
           <Link href="/about">About</Link>
-          <Link href="/about">Conversations</Link>
+          <Link href="/conversations">Conversations</Link>
           <div>
             <span className={styles.selected}>Exhibitions</span>
             <ul className={styles.exhibitionList}>{renderExhibitionList()}</ul>

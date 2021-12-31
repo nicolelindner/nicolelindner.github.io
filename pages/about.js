@@ -15,7 +15,7 @@ export default function About() {
       <div className={styles.navContainer}>
         <nav className={styles.nav}>
           <span className={styles.selected}>About</span>
-          <Link href="/about">Conversations</Link>
+          <Link href="/conversations">Conversations</Link>
           <Link href="/exhibitions">Exhibitions</Link>
           <Link href="/projects">Projects</Link>
         </nav>

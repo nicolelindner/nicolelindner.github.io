@@ -1,0 +1,76 @@
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+.navContainer {
+  position: fixed;
+  margin-left: 100px;
+  width: 300px;
+  z-index: 1;
+}
+
+.nav {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.selected {
+  color: #413e3e;
+}
+
+.conversationList {
+  position: absolute;
+  list-style: none;
+  padding-left: 20px;
+}
+
+.conversationListItem {
+  margin: 5px 0;
+}
+
+.conversationListItemButton {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: #908e8f;
+}
+
+.conversationListItemButton:hover {
+  color: #413e3e;
+}
+
+.conversationListItemSelectedButton {
+  border: none;
+  background: transparent;
+  color: #413e3e;
+}
+
+.main {
+  margin-left: 400px;
+  height: 100%;
+}
+
+.conversation {
+  padding: 200px 0;
+  width: 500px;
+  color: #413e3e;
+}
+
+.conversationTitle {
+  font-weight: 100;
+}
+
+.conversationSubtitle {
+  font-weight: 100;
+  font-style: italic;
+  padding-left: 10px;
+  margin-bottom: 30px;
+}
+
+.conversationParagraph {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}

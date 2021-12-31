@@ -29,7 +29,7 @@ export default function Projects() {
       <div className={styles.navContainer}>
         <nav className={styles.nav}>
           <Link href="/about">About</Link>
-          <Link href="/about">Conversations</Link>
+          <Link href="/conversations">Conversations</Link>
           <Link href="/exhibitions">Exhibitions</Link>
           <span className={styles.selected}>Projects</span>
         </nav>
